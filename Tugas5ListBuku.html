@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>List Buku</title>
+    <link rel="stylesheet" href="css_list.css"/>
+
+</head>
+
+<body>
+
+    <p>Hello</p>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
+    <div id="app">
+        <ul>
+            <li v-for="book in books" v-on:click="book.toggle = !book.toggle" :class="{ toggle: book.toggle }">
+                <p>{{ book.name }} - {{ book.author }}</p>
+            </li>
+        </ul>
+    </div>
+
+    <script src="vue_list.js"></script>
+</body>
+
+</html>

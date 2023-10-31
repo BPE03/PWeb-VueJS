@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>Kalkulator</title>
+
+</head>
+
+<body>
+
+    <h1>Kalkulator</h1>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
+    <div id="app">
+        <input type="number" v-model="input1">
+        <input type="number" v-model="input2"></br>
+        <button v-on:click="result=parseFloat(input1)+parseFloat(input2)">+</button>
+        <button v-on:click="result=parseFloat(input1)-parseFloat(input2)">-</button>
+        <button v-on:click="result=parseFloat(input1)*parseFloat(input2)">*</button>
+        <button v-on:click="result=parseFloat(input1)/parseFloat(input2)">/</button>
+        <p> Hasil: {{ result }} </p>
+    </div>
+
+    <script src="vue.js"></script>
+</body>
+
+</html>
